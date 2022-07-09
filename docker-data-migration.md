@@ -1,21 +1,23 @@
 # DOCKER DATA FILE MIGRATION
-**NOTES**
+## **NOTES**
 - **These steps require understanding of Linux system** 
 - **These steps require root access**
 - **These steps depend on your current /var/lib/docker being an actual directory (not a symlink to another location)**
 
-**INFORMATION**
+## **INFORMATION**
 - **/path/to/existing** is current path (normally in **/var/lib/docker**)
 - **/path/to/new** is new target path (new)
 - **/backup/location/file** is backup file (new)
 
-**MIGRATION STEPS**
+## **MIGRATION STEPS**
 1. Stop docker: service docker stop. Verify no docker process is running
 ```
 sudo systemctl stop docker.service
-ps faux |grep docker
 ```
 2. Check and verify **docker** really isn’t running
+```
+ps faux |grep docker
+```
 3. Take a look at the current docker directory
 ```
 ls /var/lib/docker/
