@@ -34,7 +34,7 @@ mv /var/lib/docker /other/location
 ```
 ln -s /path/to/new /var/lib/docker
 ```
-7. Take a peek at the directory structure to make sure it looks like it did before (note the trailing slash to resolve the symlink)
+7. **[Optional]** Take a peek at the directory structure to make sure it looks like it did before (note the trailing slash to resolve the symlink)
 ```
 ls -al /var/lib/docker
 ```
